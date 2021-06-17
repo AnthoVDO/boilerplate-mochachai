@@ -5,4 +5,6 @@
 Null  
 Defined  
 isOk   => Falsy values in JavaScript are false, null, 0, "", undefined, and NaN  
+isTrue => check for boolean true  
+equal() => compares objects using ==  
 
