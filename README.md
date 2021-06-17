@@ -4,4 +4,5 @@
   
 Null  
 Defined  
- 
+isOk   => Falsy values in JavaScript are false, null, 0, "", undefined, and NaN  
+
