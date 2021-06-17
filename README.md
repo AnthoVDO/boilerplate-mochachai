@@ -8,4 +8,4 @@ isOk   => Falsy values in JavaScript are false, null, 0, "", undefined, and NaN
 isTrue => check for boolean true  
 equal() => compares objects using ==  
 strictEqual() => compares objects using ===  
-
+deepEqual() =>  asserts that two objects are deep equal
