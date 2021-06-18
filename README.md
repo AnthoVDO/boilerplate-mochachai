@@ -15,5 +15,6 @@ isArray
 isString  
 include  => substring  
 match  
+property => check if an object as a property  
 
 
