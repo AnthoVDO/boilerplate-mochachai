@@ -13,5 +13,7 @@ comparison: isAtMost, isAbove, isBelow, isAtLeast
 approximately : Asserts that the actual is equal to expected, to within a +/- delta range  
 isArray  
 isString  
-include  => substring
+include  => substring  
+match  
+
 
