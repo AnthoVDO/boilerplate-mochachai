@@ -11,4 +11,5 @@ strictEqual() => compares objects using ===
 deepEqual() =>  asserts that two objects are deep equal
 comparison: isAtMost, isAbove, isBelow, isAtLeast  
 approximately : Asserts that the actual is equal to expected, to within a +/- delta range  
+isArray  
 
