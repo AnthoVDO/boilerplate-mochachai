@@ -30,18 +30,20 @@ suite("Functional Tests", function () {
           done();
         });
     });
-//     // #3
-//     test('send {surname: "Colombo"}', function (done) {
-//       chai
-//         .request(server)
-//         .put("/travellers")
+    // #3
+    test('send {surname: "Colombo"}', function (done) {
+      chai
+        .request(server)
+        .put("/travellers")
 
-//         .end(function (err, res) {
-//           assert.fail();
-
-//           done();
-//         });
-//     });
+        .end(function (err, res) {
+          res.status;
+          res.type;
+          res.body.name;
+          res.body.surname;
+          done();
+        });
+    });
 //     // #4
 //     test('send {surname: "da Verrazzano"}', function (done) {
 //       assert.fail();
