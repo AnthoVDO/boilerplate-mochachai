@@ -19,17 +19,17 @@ suite("Functional Tests", function () {
           done();
         });
     });
-//     // #2
-//     test("Test GET /hello with your name", function (done) {
-//       chai
-//         .request(server)
-//         .get("/hello?name=xy_z")
-//         .end(function (err, res) {
-//           assert.fail(res.status, 200);
-//           assert.fail(res.text, "hello xy_z");
-//           done();
-//         });
-//     });
+    // #2
+    test("Test GET /hello with your name", function (done) {
+      chai
+        .request(server)
+        .get("/hello?name=Antho")
+        .end(function (err, res) {
+          assert.equal(res.status, 200);
+          assert.equal(res.text, "hello Antho");
+          done();
+        });
+    });
 //     // #3
 //     test('send {surname: "Colombo"}', function (done) {
 //       chai
