@@ -4,6 +4,7 @@ const assert = chai.assert;
 const server = require("../server");
 
 const chaiHttp = require("chai-http");
+const { application } = require("express");
 chai.use(chaiHttp);
 
 suite("Functional Tests", function () {
@@ -37,7 +38,6 @@ suite("Functional Tests", function () {
         .put("/travellers")
         .send({"surname": "Colombo"})
         .end(function (err, res) {
-            console.log(res.body)
           assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
           assert.equal(res.body.name, 'Cristoforo');
@@ -45,13 +45,20 @@ suite("Functional Tests", function () {
           done();
         });
     });
-//     // #4
-//     test('send {surname: "da Verrazzano"}', function (done) {
-//       assert.fail();
-
-//       done();
-//     });
-//   });
+    // #4
+    test('send {surname: "da Verrazzano"}', function (done) {
+      chai.request(server)
+      .put("/travellers")
+      .send({"surname": "da Verrazzano"})
+      .end((err, res)=>{
+        assert.equal(res.status, 200);
+        assert.equal(res.type, "application/json");
+        assert.equal(res.body.name, "Giovanni");
+        assert.equal(res.body.surname, "da Verrazzano");
+        done();
+      })
+    });
+  });
 });
 
 // const Browser = require("zombie");
@@ -74,4 +81,4 @@ suite("Functional Tests", function () {
 //       done();
 //     });
 //   });
-});
+//});
