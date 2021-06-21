@@ -61,24 +61,30 @@ suite("Functional Tests", function () {
   });
 });
 
-// const Browser = require("zombie");
+const Browser = require("zombie");
+Browser.site = "https://learn-mochachai.herokuapp.com/";
+//  Browser.localhost("example.com", process.env.PORT||3000);
 
-// suite("Functional Tests with Zombie.js", function () {
+suite("Functional Tests with Zombie.js", function () {
+  const browser = new Browser();
+  suiteSetup((done)=>{
+    return browser.visit("/", done);
+  })
 
-//   suite('"Famous Italian Explorers" form', function () {
-//     // #5
-//     test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
-//       browser.fill("surname", "Colombo").pressButton("submit", function () {
-//         assert.fail();
+  // suite('"Famous Italian Explorers" form', function () {
+  //   // #5
+  //   test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
+  //     browser.fill("surname", "Colombo").pressButton("submit", function () {
+  //       assert.fail();
 
-//         done();
-//       });
-//     });
+  //       done();
+  //     });
+  //   });
 //     // #6
 //     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
 //       assert.fail();
 
 //       done();
 //     });
-//   });
-//});
+  });
+// });

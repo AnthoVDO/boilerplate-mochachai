@@ -1,6 +1,7 @@
 # [Quality Assurance with Chai](https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-and-testing-with-chai/)  
   
-## Note  
+## Note    
+### Chai  
   
 Null  
 Defined  
@@ -18,4 +19,12 @@ match
 property => check if an object as a property  
 typeOf  
 instanceOf  
+  
+### Chai-http  
+
+testing api endpoint  
+  
+### Zombie js  
+
+Zombie js is a headless browser to make the test  
 
