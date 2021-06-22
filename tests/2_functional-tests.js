@@ -71,15 +71,17 @@ suite("Functional Tests with Zombie.js", function () {
     return browser.visit("/", done);
   })
 
-  // suite('"Famous Italian Explorers" form', function () {
-  //   // #5
-  //   test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
-  //     browser.fill("surname", "Colombo").pressButton("submit", function () {
-  //       assert.fail();
-
-  //       done();
-  //     });
-  //   });
+  suite('"Famous Italian Explorers" form', function () {
+    // #5
+    test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
+      browser.fill("surname", "Colombo").pressButton("submit", function () {
+        browser.assert.success();
+        browser.assert.text("span#name", "Cristoforo");
+        browser.assert.text("span#surname", "Colombo");
+        browser.assert.elements("span#dates", 1);
+        done();
+      });
+    });
 //     // #6
 //     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
 //       assert.fail();
@@ -87,4 +89,4 @@ suite("Functional Tests with Zombie.js", function () {
 //       done();
 //     });
   });
-// });
+});
